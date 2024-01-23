@@ -8,8 +8,8 @@ services:
             image: nginx:latest
             volumes:
                   - ./nginx.conf:/etc/nginx/conf.d/default.conf
-                  - /home/ubuntu/privkey.pem:/privkey.pem 
-                  - /home/ubuntu/fullchain.pem:/fullchain.pem
+                  - /home/ubuntu/privkey.pem:/privkey.pem # mount the ssl private key 
+                  - /home/ubuntu/fullchain.pem:/fullchain.pem # mount the ssl cert key 
             depends_on:
                   - app
             ports:
