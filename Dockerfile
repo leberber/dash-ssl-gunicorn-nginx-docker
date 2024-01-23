@@ -13,4 +13,4 @@ RUN pip3 install -r requirements.txt
 
 CMD gunicorn --bind 0.0.0.0:80 app:server  
 
-# docker rmi -f $(docker images -aq)
+
